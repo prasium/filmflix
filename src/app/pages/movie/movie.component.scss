@@ -1,0 +1,51 @@
+@import "../../../styles/colors";
+
+:host ::ng-deep {
+    .p-tabview-nav {
+        justify-content: center;
+    }
+}
+
+.poster {
+    max-width: 100%;
+}
+
+.overview {
+    line-height: 1.5;
+}
+
+.stat {
+    display: flex;
+    margin-bottom: 1em;
+    .label {
+        width: 150px;
+        font-weight: bold;
+    }
+
+    .value {
+        color: $primaryColor;
+    }
+}
+
+.stars {
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 20px;
+    color: $primaryColor;
+}
+
+.actor {
+    padding: 10px;
+    img {
+        width: 100%;
+    }
+    span {
+        display: block;
+        text-align: center;
+        font-weight: 600;
+        font-size: 1.4rem;
+        margin: 10px 0px;
+    }
+}

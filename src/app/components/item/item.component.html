@@ -1,0 +1,40 @@
+<ng-container *ngIf="itemData; else tv">
+    <a class="item" [routerLink]="'/movie/' + itemData.id">
+        <div class="item-rating">
+            <ng-container *ngIf="itemData.vote_average != 0">
+                <i class="app-icon"> star </i>
+                <span>{{ itemData.vote_average }}</span
+                >/10
+            </ng-container>
+            <ng-container *ngIf="itemData.vote_average == 0">
+                <span>Not Rated Yet</span>
+            </ng-container>
+        </div>
+        <div class="item-image">
+            <img
+                [src]="imagesSizes.medium + itemData.poster_path"
+                [alt]="itemData.title"
+            />
+        </div>
+        <div class="item-title">{{ itemData.title }}</div>
+    </a>
+</ng-container>
+
+<ng-template #tv>
+    <ng-container *ngIf="tvItemData">
+        <a class="item">
+            <div class="item-rating">
+                <i class="app-icon"> star </i>
+                <span>{{ tvItemData.vote_average }}</span
+                >/10
+            </div>
+            <div class="item-image">
+                <img
+                    [src]="imagesSizes.medium + tvItemData.poster_path"
+                    [alt]="tvItemData.name"
+                />
+            </div>
+            <div class="item-title">{{ tvItemData.name }}</div>
+        </a>
+    </ng-container>
+</ng-template>

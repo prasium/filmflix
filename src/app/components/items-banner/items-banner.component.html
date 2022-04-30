@@ -1,0 +1,20 @@
+<ng-container *ngIf="title.includes('TV')">
+    <div class="container">
+        <h2>{{ title }}</h2>
+        <div class="grid">
+            <div class="col-6 md:col-3 lg:col-2" *ngFor="let item of tvItems">
+                <item [tvItemData]="item"></item>
+            </div>
+        </div>
+    </div>
+</ng-container>
+<ng-container *ngIf="title.includes('Movies')">
+    <div class="container">
+        <h2>{{ title }}</h2>
+        <div class="grid">
+            <div class="col-6 md:col-3 lg:col-2" *ngFor="let item of items">
+                <item [itemData]="item"></item>
+            </div>
+        </div>
+    </div>
+</ng-container>
